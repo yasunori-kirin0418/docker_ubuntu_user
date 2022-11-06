@@ -1,6 +1,14 @@
 FROM ubuntu:22.10
 
-RUN apt-get update && apt-get install -y sudo git curl vim ripgrep exa bat
+RUN apt-get update && \
+    apt-get install -y \
+        sudo \
+        git \
+        curl \
+        vim \
+        exa \
+        bat \
+        zsh
 
 ARG USERNAME=user
 ARG GROUPNAME=user
