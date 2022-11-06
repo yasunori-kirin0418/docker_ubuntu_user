@@ -1,17 +1,15 @@
-FROM ubuntu:22.10
+FROM ubuntu:latest
 
 MAINTAINER yasunori0418
-LABEL description="Ubuntu 22.10環境に日本語ユーザーを作成します。"
+LABEL description="Ubuntuに日本語ユーザーを作成します。"
+
+ENV LANG=ja_JP.UTF-8
 
 RUN apt-get update && \
     apt-get install -y \
-        sudo \
-        git \
-        curl \
-        vim \
-        exa \
-        bat \
-        zsh
+        sudo git curl vim exa bat zsh xdg-user-dirs \
+        language-pack-ja-base language-pack-ja locales && \
+    locale-gen ja_JP.UTF-8
 
 ARG USERNAME=user
 ARG GROUPNAME=user
