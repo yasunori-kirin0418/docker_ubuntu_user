@@ -1,5 +1,8 @@
 FROM ubuntu:22.10
 
+MAINTAINER yasunori0418
+LABEL description="Ubuntu 22.10環境に日本語ユーザーを作成します。"
+
 RUN apt-get update && \
     apt-get install -y \
         sudo \
