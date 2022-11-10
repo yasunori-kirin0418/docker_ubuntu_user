@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  ubuntu_user:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - USER_NAME=yasunori
+        - GROUP_NAME=yasunori
+        - PASSWORD=yasunori
+    tty: true
