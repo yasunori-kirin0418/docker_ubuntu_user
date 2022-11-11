@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
       args:
-        - USER_NAME=yasunori
-        - GROUP_NAME=yasunori
-        - PASSWORD=yasunori
+        - USER_NAME=user
+        - GROUP_NAME=user
+        - PASSWORD=user
     tty: true
