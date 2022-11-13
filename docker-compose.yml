@@ -9,3 +9,5 @@ services:
         - GROUP_NAME=user
         - PASSWORD=user
     tty: true
+    environment:
+      TERM: xterm-256color
