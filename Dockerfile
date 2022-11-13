@@ -1,4 +1,7 @@
 FROM ubuntu:latest
+## M1 macユーザーには必要。
+## 下のコメントアウトを解除して、上をコメントアウトする必要があるかも
+#FROM --platform=linux/amd64 ubuntu:latest
 
 MAINTAINER yasunori0418
 LABEL description="Ubuntuに日本語ユーザーを作成します。"
