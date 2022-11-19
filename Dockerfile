@@ -9,6 +9,7 @@ LABEL description="Ubuntuに日本語ユーザーを作成します。"
 # ここで、環境の言語を指定
 ENV LANG=ja_JP.UTF-8
 
+# パッケージの更新とインストール……最後に日本語化
 RUN apt-get update && \
     apt-get install -y \
         sudo git curl vim exa bat zsh xdg-user-dirs \
@@ -24,6 +25,7 @@ ARG PASSWORD=user
 ARG SHELL_NAME=bash
 ARG SHELL=/bin/${SHELL_NAME}
 
+# ユーザー作成コマンド
 RUN groupadd -g ${GID} ${GROUP_NAME} && \
     useradd --create-home --shell=${SHELL} --uid=${UID} --gid=${GID} --groups sudo ${USER_NAME} && \
     echo ${USER_NAME}:${PASSWORD} | chpasswd && \
