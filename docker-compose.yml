@@ -9,3 +9,7 @@ services:
         - GROUP_NAME=user
         - PASSWORD=user
     tty: true
+    volumes:
+      - type: bind
+        source: ./Public
+        target: $HOME/Public
