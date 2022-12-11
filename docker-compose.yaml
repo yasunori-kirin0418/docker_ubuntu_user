@@ -8,4 +8,9 @@ services:
         - USER_NAME=user
         - GROUP_NAME=user
         - PASSWORD=user
+    container_name: ubuntu_user
     tty: true
+    volumes:
+      - type: bind
+        source: ./Public
+        target: /home/user/Public
